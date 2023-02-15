@@ -127,3 +127,5 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+open_ai_api.txt
+wolfram_api.txt

@@ -1,7 +1,23 @@
 import gradio as gr
 
-def greet(name):
-    return "Hello " + name + "!!"
+from langchain import LangChain
+from langchain.utilities.wolfram_alpha import WolframAlphaAPIWrapper
+from langchain.llms import OpenAI
 
-iface = gr.Interface(fn=greet, inputs="text", outputs="text")
+import os
+
+# read in the API key from secrets
+open_ai_api_key = os.environ.get('open_ai_api_key')
+wolfram_app_id = os.environ.get('wolfram_app_id')
+
+# instantiate the API wrappers
+llm = OpenAI(model_name="text-ada-001", n=2, best_of=2)
+
+# Define Gradio interface
+def chatbot(input_text):
+    # Use LangChain to generate response
+    response = llm(input_text)
+    return response
+
+iface = gr.Interface(fn=chatbot, inputs="text", outputs="text")
 iface.launch()
