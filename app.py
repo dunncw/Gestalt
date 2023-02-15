@@ -1,7 +1,5 @@
 import gradio as gr
 
-from langchain import LangChain
-from langchain.utilities.wolfram_alpha import WolframAlphaAPIWrapper
 from langchain.llms import OpenAI
 
 import os
