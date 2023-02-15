@@ -106,7 +106,7 @@ with block:
     #                             inputs=[openai_api_key_textbox, agent_state],
     #                             outputs=[agent_state])
 
-block.queue(debug=True)   # was launch(debug = True)
+block.queue()   # was launch(debug = True)
 
 
 demo = gr.TabbedInterface(
