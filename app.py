@@ -102,14 +102,14 @@ with block:
 
 block.queue()   # was launch(debug = True)
 
-
 demo = gr.TabbedInterface(
 
     [block], ["chat"],
     title='LangChain AI',
-    init_fn=init_agent
 
 )
+
+init_agent()
 
 demo.queue()
 demo.launch(share=False)
