@@ -24,10 +24,29 @@ news_api_key = os.environ["NEWS_API_KEY"]
 tmdb_bearer_token = os.environ["TMDB_BEARER_TOKEN"]
 
 # init agent
-tool_names = ['python_repl', 'serpapi', 'wolfram-alpha', 'requests', 'terminal', 'pal-math', 'pal-colored-objects', 'llm-math', 'open-meteo-api', 'news-api', 'tmdb-api']
-llm = OpenAI(model_name="text-davinci-003", temperature=0, openai_api_key=os.environ["open_ai_api_key"])
-tools = load_tools(tool_names, llm=llm, news_api_key=news_api_key, tmdb_bearer_token=tmdb_bearer_token)
-agent = initialize_agent(tools, llm, agent="zero-shot-react-description", verbose=True)
+def init_agent():
+    tool_names = ['python_repl', 'serpapi', 'wolfram-alpha', 'requests', 'terminal', 'pal-math', 'pal-colored-objects', 'llm-math', 'open-meteo-api', 'news-api', 'tmdb-api']
+    llm = OpenAI(model_name="text-davinci-003", temperature=0, openai_api_key=os.environ["open_ai_api_key"])
+    tools = load_tools(tool_names, llm=llm, news_api_key=news_api_key, tmdb_bearer_token=tmdb_bearer_token)
+    agent = initialize_agent(tools, llm, agent="zero-shot-react-description", verbose=True)
+    print(agent_state)
+
+# def set_openai_api_key(api_key, agent):
+#     if api_key:
+#         tool_names = ['python_repl', 'serpapi', 'wolfram-alpha', 'requests', 'terminal', 'pal-math', 'pal-colored-objects', 'llm-math', 'open-meteo-api', 'news-api', 'tmdb-api']
+
+#         # load in the api key and initialize gpt3
+#         llm = OpenAI(model_name="text-davinci-003", temperature=0, openai_api_key=os.environ["open_ai_api_key"])
+
+#         # # in prod this should look like this so we are taking the api key from the textbox(user input) and charging them for the api calls ### very important ###
+#         # os.environ["OPENAI_API_KEY"] = api_key
+#         # llm = OpenAI(model_name="text-davinci-003", temperature=0)
+#         # os.environ["OPENAI_API_KEY"] = ""
+
+#         tools = load_tools(tool_names, llm=llm, news_api_key=news_api_key, tmdb_bearer_token=tmdb_bearer_token)
+#         agent = initialize_agent(tools, llm, agent="zero-shot-react-description", verbose=True)
+#         print(agent_state)
+#         return agent
 
 # Define chat function
 def chat(inp, history, agent):
@@ -44,6 +63,9 @@ block = gr.Blocks(css=".gradio-container {background-color: red}")
 with block:
     with gr.Row():
         gr.Markdown("<h3><center>LangChain AI</center></h3>")
+
+        # openai_api_key_textbox = gr.Textbox(placeholder="Paste your OpenAI API key (sk-...)",
+        #        show_label=False, lines=1, type='password')
 
     chatbot = gr.Chatbot()
 
@@ -68,8 +90,14 @@ with block:
 
     state = gr.State()
     agent_state = gr.State()
+    init_agent()
 
     submit.click(chat, inputs=[message, state, agent_state], outputs=[chatbot, state])
     message.submit(chat, inputs=[message, state, agent_state], outputs=[chatbot, state])
+
+    # # if someone changes the API key text box, we set api key and initialize agent and load tools
+    # openai_api_key_textbox.change(set_openai_api_key,
+    #                             inputs=[openai_api_key_textbox, agent_state],
+    #                             outputs=[agent_state])
 
 block.launch(debug = True)
