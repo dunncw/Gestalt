@@ -90,7 +90,9 @@ with block:
 
     state = gr.State()
     agent_state = gr.State()
-    init_agent()
+    
+    # on page load, we initialize the agent
+    block.onload(init_agent, inputs=[], outputs=[agent_state])
 
     submit.click(chat, inputs=[message, state, agent_state], outputs=[chatbot, state])
     message.submit(chat, inputs=[message, state, agent_state], outputs=[chatbot, state])
