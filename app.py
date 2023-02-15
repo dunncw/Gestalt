@@ -30,6 +30,7 @@ def init_agent():
     tools = load_tools(tool_names, llm=llm, news_api_key=news_api_key, tmdb_bearer_token=tmdb_bearer_token)
     agent = initialize_agent(tools, llm, agent="zero-shot-react-description", verbose=True)
     print(agent_state)
+    return agent
 
 # def set_openai_api_key(api_key, agent):
 #     if api_key:
@@ -88,8 +89,10 @@ with block:
 
     gr.HTML("""<center>Powered by <a href='https://github.com/hwchase17/langchain'>LangChain 🦜️🔗</a></center>""")
 
+
     state = gr.State()
-    agent_state = gr.State()
+    agent_state = init_agent()
+    
     
 
     submit.click(chat, inputs=[message, state, agent_state], outputs=[chatbot, state])
@@ -108,8 +111,6 @@ demo = gr.TabbedInterface(
     title='LangChain AI',
 
 )
-
-init_agent()
 
 demo.queue()
 demo.launch(share=False)
