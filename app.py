@@ -3,7 +3,7 @@ import gradio as gr
 
 # langchain
 from langchain.llms import OpenAI
-from langchain.agents import load_tools, initialize_agent, get_all_tool_names
+from langchain.agents import load_tools, initialize_agent
 
 #openai
 import openai
@@ -16,10 +16,12 @@ import requests
 
 # wolfram alpha app_id
 app_id = os.environ["WOLFRAM_ALPHA_APPID"]
+news_api_key = os.environ["NEWS_API_KEY"]
+tmdb_bearer_token = os.environ["TMDB_BEARER_TOKEN"]
 
 def set_openai_api_key(api_key, agent):
     if api_key:
-        tool_names = get_all_tool_names()
+        tool_names = ['python_repl', 'serpapi', 'wolfram-alpha', 'requests', 'terminal', 'pal-math', 'pal-colored-objects', 'llm-math', 'open-meteo-api', 'news-api', 'tmdb-api']
 
         # load in the api key and initialize gpt3
         llm = OpenAI(model_name="text-davinci-003", temperature=0, openai_api_key=os.environ["open_ai_api_key"])
@@ -29,7 +31,7 @@ def set_openai_api_key(api_key, agent):
         # llm = OpenAI(model_name="text-davinci-003", temperature=0)
         # os.environ["OPENAI_API_KEY"] = ""
 
-        tools = load_tools(tool_names, llm=llm)
+        tools = load_tools(tool_names, llm=llm, news_api_key=news_api_key, tmdb_bearer_token=tmdb_bearer_token)
         agent = initialize_agent(tools, llm, agent="zero-shot-react-description", verbose=True)
         return agent
 
