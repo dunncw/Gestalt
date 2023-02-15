@@ -29,7 +29,6 @@ def init_agent():
     llm = OpenAI(model_name="text-davinci-003", temperature=0, openai_api_key=os.environ["open_ai_api_key"])
     tools = load_tools(tool_names, llm=llm, news_api_key=news_api_key, tmdb_bearer_token=tmdb_bearer_token)
     agent = initialize_agent(tools, llm, agent="zero-shot-react-description", verbose=True)
-    print(agent_state)
     return agent
 
 # def set_openai_api_key(api_key, agent):
@@ -92,6 +91,7 @@ with block:
 
     state = gr.State()
     agent_state = init_agent()
+    print(agent_state)
     
     
 
