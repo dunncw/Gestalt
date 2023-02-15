@@ -47,7 +47,7 @@ agent = initialize_agent(tools, llm, agent="zero-shot-react-description", verbos
 #         return agent
 
 # Define chat function
-def chat(inp, history, agent):
+def chat(inp, history):
     print("\n==== date/time: " + str(datetime.datetime.now()) + " ====")
     print("inp: " + inp)
     history = history or []
@@ -91,8 +91,8 @@ with block:
 
 
     
-    submit.click(chat, inputs=[message, state, agent], outputs=[chatbot, state])
-    message.submit(chat, inputs=[message, state, agent], outputs=[chatbot, state])
+    submit.click(chat, inputs=[message, state], outputs=[chatbot, state])
+    message.submit(chat, inputs=[message, state], outputs=[chatbot, state])
 
     # # if someone changes the API key text box, we set api key and initialize agent and load tools
     # openai_api_key_textbox.change(set_openai_api_key,
