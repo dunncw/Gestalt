@@ -24,7 +24,7 @@ news_api_key = os.environ["NEWS_API_KEY"]
 tmdb_bearer_token = os.environ["TMDB_BEARER_TOKEN"]
 
 # initialize agent
-tool_names = ['python_repl', 'serpapi', 'wolfram-alpha', 'requests', 'terminal', 'pal-math', 'pal-colored-objects', 'llm-math', 'open-meteo-api', 'news-api', 'tmdb-api']
+tool_names = ['serpapi', 'wolfram-alpha', 'pal-math', 'pal-colored-objects'] # 'open-meteo-api', 'news-api', 'tmdb-api'
 llm = OpenAI(model_name="text-davinci-003", temperature=0, openai_api_key=os.environ["open_ai_api_key"])
 tools = load_tools(tool_names, llm=llm, news_api_key=news_api_key, tmdb_bearer_token=tmdb_bearer_token)
 agent = initialize_agent(tools, llm, agent="zero-shot-react-description", verbose=True)
@@ -55,10 +55,10 @@ with block:
 
     gr.Examples(
         examples=["How many people live in Canada?",
-                  "What is 13**.3?",
+                  "A triangle has the following side lengths: 4 cm, 4 cm and 4 cm. What kind of triangle is it?",
                   "what is the weather like today on the College of charleston Campus?",
-                  "Get me information about the movie 'Avatar'",
-                  "What are the top tech headlines in the US?",
+                  "There are 235 books in a library. On Monday, 123 books are taken out. On Tuesday, 56 books are brought back. How many books are there now?",
+                  "Last hockey season, Jack scored g goals. Patrik scored twice as many goals than Jack. Write an expression that shows how many goals Patrik scored.",
                   "On the desk, you see two blue booklets, two purple booklets, and two yellow pairs of sunglasses - "
                   "if I remove all the pairs of sunglasses from the desk, how many purple items remain on it?"],
         inputs=message
