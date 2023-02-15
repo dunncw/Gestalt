@@ -19,16 +19,14 @@ def set_openai_api_key(api_key, agent):
         tool_names = get_all_tool_names()
 
         # load in the api key and initialize gpt3
-        os.environ["OPENAI_API_KEY"]
-        llm = OpenAI(model_name="text-davinci-003", temperature=0)
-        os.environ["OPENAI_API_KEY"] = ""
+        llm = OpenAI(model_name="text-davinci-003", temperature=0, openai_api_key=os.environ["OPENAI_API_KEY"])
 
         # # in prod this should look like this so we are taking the api key from the textbox(user input) and charging them for the api calls ### very important ###
         # os.environ["OPENAI_API_KEY"] = api_key
         # llm = OpenAI(model_name="text-davinci-003", temperature=0)
         # os.environ["OPENAI_API_KEY"] = ""
 
-        tools = load_tools(tool_names, llm=llm, news_api_key=news_api_key, tmdb_bearer_token=tmdb_bearer_token)
+        tools = load_tools(tool_names, llm=llm)
         agent = initialize_agent(tools, llm, agent="zero-shot-react-description", verbose=True)
         return agent
 
