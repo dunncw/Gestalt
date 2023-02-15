@@ -70,16 +70,16 @@ with block:
         inputs=message
     )
 
-gr.HTML("""<center>Powered by <a href='https://github.com/hwchase17/langchain'>LangChain 🦜️🔗</a></center>""")
+    gr.HTML("""<center>Powered by <a href='https://github.com/hwchase17/langchain'>LangChain 🦜️🔗</a></center>""")
 
-state = gr.State()
-agent_state = gr.State()
+    state = gr.State()
+    agent_state = gr.State()
 
-submit.click(chat, inputs=[message, state, agent_state], outputs=[chatbot, state])
-message.submit(chat, inputs=[message, state, agent_state], outputs=[chatbot, state])
+    submit.click(chat, inputs=[message, state, agent_state], outputs=[chatbot, state])
+    message.submit(chat, inputs=[message, state, agent_state], outputs=[chatbot, state])
 
-# if someone changes the API key text box, we set api key and initialize agent and load tools
-openai_api_key_textbox.change(set_openai_api_key,
+    # if someone changes the API key text box, we set api key and initialize agent and load tools
+    openai_api_key_textbox.change(set_openai_api_key,
                                 inputs=[openai_api_key_textbox, agent_state],
                                 outputs=[agent_state])
 

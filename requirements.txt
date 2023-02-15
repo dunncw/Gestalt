@@ -2,3 +2,6 @@ langchain>=latest
 gradio>=latest
 openai>=latest
 wolframalpha
+google-search-results
+google-api-python-client
+requests>=latest
