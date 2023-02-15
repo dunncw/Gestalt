@@ -14,6 +14,9 @@ import datetime
 import io
 import requests
 
+# wolfram alpha app_id
+app_id = os.environ["WOLFRAM_ALPHA_APPID"]
+
 def set_openai_api_key(api_key, agent):
     if api_key:
         tool_names = get_all_tool_names()
