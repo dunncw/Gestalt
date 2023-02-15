@@ -9,7 +9,7 @@ open_ai_api_key = os.environ.get('open_ai_api_key')
 wolfram_app_id = os.environ.get('wolfram_app_id')
 
 # instantiate the API wrappers
-llm = OpenAI(model_name="text-ada-001", n=2, best_of=2)
+llm = OpenAI(model_name="text-ada-001", n=2, best_of=2, openai_api_key=open_ai_api_key)
 
 # Define Gradio interface
 def chatbot(input_text):
