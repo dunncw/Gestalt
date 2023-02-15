@@ -29,8 +29,6 @@ llm = OpenAI(model_name="text-davinci-003", temperature=0, openai_api_key=os.env
 tools = load_tools(tool_names, llm=llm, news_api_key=news_api_key, tmdb_bearer_token=tmdb_bearer_token)
 agent = initialize_agent(tools, llm, agent="zero-shot-react-description", verbose=True)
 
-
-
 # def set_openai_api_key(api_key, agent):
 #     if api_key:
 #         tool_names = ['python_repl', 'serpapi', 'wolfram-alpha', 'requests', 'terminal', 'pal-math', 'pal-colored-objects', 'llm-math', 'open-meteo-api', 'news-api', 'tmdb-api']
@@ -90,9 +88,11 @@ with block:
 
 
     state = gr.State()
+
+
     
-    submit.click(chat, inputs=[message, state], outputs=[chatbot, state])
-    message.submit(chat, inputs=[message, state], outputs=[chatbot, state])
+    submit.click(chat, inputs=[message, state, agent], outputs=[chatbot, state])
+    message.submit(chat, inputs=[message, state, agent], outputs=[chatbot, state])
 
     # # if someone changes the API key text box, we set api key and initialize agent and load tools
     # openai_api_key_textbox.change(set_openai_api_key,
