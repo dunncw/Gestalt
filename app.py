@@ -23,9 +23,6 @@ news_api_key = os.environ["NEWS_API_KEY"]
 # tmdb bearer token
 tmdb_bearer_token = os.environ["TMDB_BEARER_TOKEN"]
 
-# agent init'ed state
-agent_inited = False
-
 # init agent
 def init_agent():
     tool_names = ['python_repl', 'serpapi', 'wolfram-alpha', 'requests', 'terminal', 'pal-math', 'pal-colored-objects', 'llm-math', 'open-meteo-api', 'news-api', 'tmdb-api']
@@ -53,9 +50,6 @@ def init_agent():
 
 # Define chat function
 def chat(inp, history, agent):
-    if(not agent_inited):
-        init_agent()
-        agent_inited = True
     print("\n==== date/time: " + str(datetime.datetime.now()) + " ====")
     print("inp: " + inp)
     history = history or []
@@ -113,6 +107,7 @@ demo = gr.TabbedInterface(
 
     [block], ["chat"],
     title='LangChain AI',
+    init_fn=init_agent
 
 )
 
