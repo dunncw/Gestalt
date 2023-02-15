@@ -33,6 +33,7 @@ def set_openai_api_key(api_key, agent):
 
         tools = load_tools(tool_names, llm=llm, news_api_key=news_api_key, tmdb_bearer_token=tmdb_bearer_token)
         agent = initialize_agent(tools, llm, agent="zero-shot-react-description", verbose=True)
+        print(agent_state)
         return agent
 
 # Define chat function
