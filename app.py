@@ -91,8 +91,6 @@ with block:
 
     state = gr.State()
     agent_state = init_agent()
-    print(agent_state)
-    
     
 
     submit.click(chat, inputs=[message, state, agent_state], outputs=[chatbot, state])
