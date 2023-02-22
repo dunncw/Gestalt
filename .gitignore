@@ -129,3 +129,5 @@ dmypy.json
 .pyre/
 open_ai_api.txt
 wolfram_api.txt
+app copy.py
+save.py
