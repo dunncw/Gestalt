@@ -9,10 +9,11 @@ import datetime
 app_id = os.environ["WOLFRAM_ALPHA_APPID"]
 news_api_key = os.environ["NEWS_API_KEY"]
 tmdb_bearer_token = os.environ["TMDB_BEARER_TOKEN"]
+openai_api_key = os.environ["open_ai_api_key"]
 
 # Load necessary tools and agents
 tool_names = ['serpapi', 'wolfram-alpha', 'pal-math', 'news-api']
-llm = OpenAI(model_name="text-davinci-003", openai_api_key=os.environ["open_ai_api_key"])
+llm = OpenAI(model_name="text-davinci-003", openai_api_key=openai_api_key)
 tools = load_tools(tool_names, llm=llm, news_api_key=news_api_key, tmdb_bearer_token=tmdb_bearer_token)
 agent = initialize_agent(tools, llm, agent="zero-shot-react-description", verbose=True)
 
@@ -30,7 +31,7 @@ def chat(user_input, chat_history):
 
 # Define Gradio interface components
 message = gr.inputs.Textbox(label="What's your question?", placeholder="What's the answer to life, the universe, and everything?", lines=1)
-chatbot = gr.outputs.Component(lambda chat_history: chat_history[-1][1], type="chat", label="Chatbot", examples=[["Hello", "Hi there!"]])
+chatbot = gr.Interface.custom_output("Chatbot", type="chat", examples=[["Hello", "Hi there!"]], live=True)
 
 examples = [
     "How many people live in Canada?",
@@ -40,8 +41,8 @@ examples = [
 
 gr.Interface(
     fn=chat,
-    inputs=[message, gr.inputs.Chat("Chat History")],
-    outputs=[chatbot, gradio.components.Chat(label="Chat History")],
+    inputs=[message],
+    outputs=[chatbot],
     title="LangChain AI",
     description="Ask me anything!",
     examples=examples,
