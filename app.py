@@ -50,8 +50,7 @@ with  gr.Blocks() as block:
 
     with gr.Row():
         #created a textbox so user can input question
-        question = gr.Textbox(label=False,
-                             placeholder="Enter your question here then click 'Send' button or press 'Enter'",
+        question = gr.Textbox(placeholder="Enter your question here then click 'Send' button or press 'Enter'",
                              lines=1)
         #created a button to send the question to the chatbot.
         send = gr.Button(value="Send", variant="secondary").style(full_width=False)
@@ -60,7 +59,8 @@ with  gr.Blocks() as block:
     gr.Examples(
         examples=["How many people live in Canada?",
                   "A triangle has the following side lengths: 4 cm, 4 cm and 4 cm. What kind of triangle is it?",
-                  "There are 235 books in a library. On Monday, 123 books are taken out. On Tuesday, 56 books are brought back. How many books are there now?", ],
+                  "There are 235 books in a library. On Monday, 123 books are taken out. On Tuesday, 56 books are brought back. How many books are there now?",
+                   "Solve an ordinary differential equation: y'' + y = 0" ],
         inputs=question
     )
 
