@@ -30,7 +30,7 @@ def chat(user_input, chat_history):
 
 # Define Gradio interface components
 message = gr.inputs.Textbox(label="What's your question?", placeholder="What's the answer to life, the universe, and everything?", lines=1)
-chatbot = gr.outputs.Chat(label="Chatbot")
+chatbot = gr.outputs.Component(lambda chat_history: chat_history[-1][1], type="chat", label="Chatbot", examples=[["Hello", "Hi there!"]])
 
 examples = [
     "How many people live in Canada?",
@@ -41,7 +41,7 @@ examples = [
 gr.Interface(
     fn=chat,
     inputs=[message, gr.inputs.Chat("Chat History")],
-    outputs=[chatbot, gr.outputs.Chat("Chat History")],
+    outputs=[chatbot, gradio.components.Chat(label="Chat History")],
     title="LangChain AI",
     description="Ask me anything!",
     examples=examples,
