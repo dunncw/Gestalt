@@ -41,20 +41,44 @@ def chat(user_input, chat_history):
     # Return the chat history to the chatbot and the gradio state
     return chat_history, chat_history
 
-# create the chatbot
-chatbot = gr.outputs.Textbox(label="Conversation", lines=10)
+# this is the code for the gradio interface
+with  gr.Blocks() as block:
+    # create a chatbox to display the bot's response.
+    chatbot = gr.Chatbot()
+    # create a state to save the chat history.
+    state = gr.State()
 
-# create the question input
-question = gr.inputs.Textbox(label="What's your question?", placeholder="What's the answer to life, the universe, and everything?")
+    with gr.Row():
+        #created a textbox so user can input question
+        question = gr.Textbox(label=False,
+                             placeholder="Enter your question here then click 'Send' button or press 'Enter'",
+                             lines=1)
+        #created a button to send the question to the chatbot.
+        send = gr.Button(value="Send", variant="secondary").style(full_width=False)
 
-# create the send button
-send_button = gr.outputs.Button(label="Send")
+    # create example questions to show the user the format of the questions they should ask. and what type of question the system is made to handle in both complexity and scope
+    gr.Examples(
+        examples=["How many people live in Canada?",
+                  "A triangle has the following side lengths: 4 cm, 4 cm and 4 cm. What kind of triangle is it?",
+                  "There are 235 books in a library. On Monday, 123 books are taken out. On Tuesday, 56 books are brought back. How many books are there now?", ],
+        inputs=question
+    )
 
-# create the initial state
-state = gr.outputs.Label(value="Type in a question and click 'Send' to start the conversation.")
+    #connects the send button to the function that will respond to the user's question.
+    send.click(chat, inputs=[question, state], outputs=[chatbot, state])
+    #connects the enter key to the function that will respond to the user's question.
+    question.submit(chat, inputs=[question, state], outputs=[chatbot, state])
 
-# create the gradio interface
-interface = gr.Interface(fn=chat, inputs=[question, state, send_button], outputs=[chatbot, state], capture_session=True)
+    gr.HTML("""<center>Powered by <a href='https://github.com/hwchase17/langchain'>LangChain 🦜️🔗</a></center>""")
 
-# launch the interface
-interface.launch(share=False)
+block.queue() # was launch(debug = True)
+
+demo = gr.TabbedInterface(
+
+    [block], ["chat"],
+    title='LangChain AI',
+
+)
+
+demo.queue()
+demo.launch(share=False)
