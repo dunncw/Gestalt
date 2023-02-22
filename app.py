@@ -9,11 +9,10 @@ import datetime
 app_id = os.environ["WOLFRAM_ALPHA_APPID"]
 news_api_key = os.environ["NEWS_API_KEY"]
 tmdb_bearer_token = os.environ["TMDB_BEARER_TOKEN"]
-openai_api_key = os.environ["OPENAI_API_KEY"]
 
 # Load necessary tools and agents
 tool_names = ['serpapi', 'wolfram-alpha', 'pal-math', 'news-api']
-llm = OpenAI(model_name="text-davinci-003", openai_api_key=openai_api_key)
+llm = OpenAI(model_name="text-davinci-003", openai_api_key=os.environ["open_ai_api_key"])
 tools = load_tools(tool_names, llm=llm, news_api_key=news_api_key, tmdb_bearer_token=tmdb_bearer_token)
 agent = initialize_agent(tools, llm, agent="zero-shot-react-description", verbose=True)
 
