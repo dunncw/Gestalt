@@ -1,23 +1,15 @@
 # gradio
 import gradio as gr
 
+# old init imports
 # langchain
-# from langchain.llms import OpenAI, LLMMathChain, SerpAPIWrapper
-from langchain.agents import load_tools, initialize_agent
+# from langchain.llms import OpenAI
+# from langchain.agents import load_tools, initialize_agent
 
+# new imports
+from langchain import OpenAI, LLMMathChain, SerpAPIWrapper
+from langchain.agents import initialize_agent, Tool
 from langchain.chat_models import ChatOpenAI
-# from langchain import PromptTemplate, LLMChain
-# from langchain.prompts.chat import (
-#     ChatPromptTemplate,
-#     SystemMessagePromptTemplate,
-#     AIMessagePromptTemplate,
-#     HumanMessagePromptTemplate,
-# )
-# from langchain.schema import (
-#     AIMessage,
-#     HumanMessage,
-#     SystemMessage
-# )
 
 #openai
 import openai
@@ -37,12 +29,37 @@ news_api_key = os.environ["NEWS_API_KEY"]
 # tmdb bearer token
 tmdb_bearer_token = os.environ["TMDB_BEARER_TOKEN"]
 
+# SERP API key
+serp_api_key = os.environ["SERPAPI_API_KEY"]
+
+####
+# trying to make MRKLChat work
+llm = ChatOpenAI(temperature=0, openai_api_key=os.environ["open_ai_api_key"])
+llm1 = OpenAI(temperature=0, openai_api_key=os.environ["open_ai_api_key"])
+search = SerpAPIWrapper(serpapi_api_key=serp_api_key, verbose=True)
+llm_math_chain = LLMMathChain(llm=llm1, verbose=True)
+tools = [
+    Tool(
+        name = "Search",
+        func=search.run,
+        description="useful for when you need to answer questions about current events. You should ask targeted questions"
+    ),
+    Tool(
+        name="Calculator",
+        func=llm_math_chain.run,
+        description="useful for when you need to answer questions about math"
+    ),
+]
+
+agent = initialize_agent(tools, llm, agent="chat-zero-shot-react-description", verbose=True)
+####
+
+# old way of initializing agent
 # initialize agent
-tool_names = ['serpapi', 'wolfram-alpha', 'pal-math', 'news-api'] # 'open-meteo-api', 'tmdb-api', 'pal-colored-objects'
+# tool_names = ['serpapi', 'wolfram-alpha', 'pal-math', 'news-api'] # 'open-meteo-api', 'tmdb-api', 'pal-colored-objects'
 # llm = OpenAI(model_name="text-davinci-003", openai_api_key=os.environ["open_ai_api_key"])
-llm_chat = ChatOpenAI(openai_api_key=os.environ["open_ai_api_key"])
-tools = load_tools(tool_names, llm=llm_chat, news_api_key=news_api_key, tmdb_bearer_token=tmdb_bearer_token)
-agent = initialize_agent(tools, llm_chat, agent="zero-shot-react-description", verbose=True)
+# tools = load_tools(tool_names, llm=llm, news_api_key=news_api_key, tmdb_bearer_token=tmdb_bearer_token)
+# agent = initialize_agent(tools, llm, agent="zero-shot-react-description", verbose=True)
 
 # Define chat function
 def chat(user_input, chat_history):
