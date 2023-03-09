@@ -25,7 +25,7 @@ tmdb_bearer_token = os.environ["TMDB_BEARER_TOKEN"]
 
 # initialize agent
 tool_names = ['serpapi', 'wolfram-alpha', 'pal-math', 'news-api'] # 'open-meteo-api', 'tmdb-api', 'pal-colored-objects'
-llm = OpenAI(model_name="gpt-3.5-turbo", openai_api_key=os.environ["open_ai_api_key"]) # i was using "text-davinci-003" but chatgpt is cheaper
+llm = OpenAI(model_name="text-curie-001", openai_api_key=os.environ["open_ai_api_key"]) # i was using "text-davinci-003" but chatgpt is cheaper
 tools = load_tools(tool_names, llm=llm, news_api_key=news_api_key, tmdb_bearer_token=tmdb_bearer_token)
 agent = initialize_agent(tools, llm, agent="zero-shot-react-description", verbose=True)
 
