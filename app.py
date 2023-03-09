@@ -36,7 +36,7 @@ serp_api_key = os.environ["SERPAPI_API_KEY"]
 # trying to make MRKLChat work
 llm = ChatOpenAI(temperature=0, openai_api_key=os.environ["open_ai_api_key"])
 llm1 = OpenAI(temperature=0, openai_api_key=os.environ["open_ai_api_key"])
-search = SerpAPIWrapper(serpapi_api_key=serp_api_key, verbose=True)
+search = SerpAPIWrapper()
 llm_math_chain = LLMMathChain(llm=llm1, verbose=True)
 tools = [
     Tool(
