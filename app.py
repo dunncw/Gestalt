@@ -2,8 +2,22 @@
 import gradio as gr
 
 # langchain
-from langchain.llms import OpenAI
+# from langchain.llms import OpenAI, LLMMathChain, SerpAPIWrapper
 from langchain.agents import load_tools, initialize_agent
+
+from langchain.chat_models import ChatOpenAI
+# from langchain import PromptTemplate, LLMChain
+# from langchain.prompts.chat import (
+#     ChatPromptTemplate,
+#     SystemMessagePromptTemplate,
+#     AIMessagePromptTemplate,
+#     HumanMessagePromptTemplate,
+# )
+# from langchain.schema import (
+#     AIMessage,
+#     HumanMessage,
+#     SystemMessage
+# )
 
 #openai
 import openai
@@ -25,9 +39,10 @@ tmdb_bearer_token = os.environ["TMDB_BEARER_TOKEN"]
 
 # initialize agent
 tool_names = ['serpapi', 'wolfram-alpha', 'pal-math', 'news-api'] # 'open-meteo-api', 'tmdb-api', 'pal-colored-objects'
-llm = OpenAI(model_name="text-davinci-003", openai_api_key=os.environ["open_ai_api_key"])
-tools = load_tools(tool_names, llm=llm, news_api_key=news_api_key, tmdb_bearer_token=tmdb_bearer_token)
-agent = initialize_agent(tools, llm, agent="zero-shot-react-description", verbose=True)
+# llm = OpenAI(model_name="text-davinci-003", openai_api_key=os.environ["open_ai_api_key"])
+llm_chat = ChatOpenAI(openai_api_key=os.environ["open_ai_api_key"])
+tools = load_tools(tool_names, llm=llm_chat, news_api_key=news_api_key, tmdb_bearer_token=tmdb_bearer_token)
+agent = initialize_agent(tools, llm_chat, agent="zero-shot-react-description", verbose=True)
 
 # Define chat function
 def chat(user_input, chat_history):
