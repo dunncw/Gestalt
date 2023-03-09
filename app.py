@@ -51,7 +51,7 @@ tools = [
     ),
 ]
 
-agent = initialize_agent(tools, llm, agent="chat-zero-shot-react-description", verbose=True)
+agent = initialize_agent(tools, llm, agent="conversational-react-description", verbose=True)
 ####
 
 # old way of initializing agent
