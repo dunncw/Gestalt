@@ -1,4 +1,4 @@
-langchain>=latest
+langchain==0.0.105
 gradio>=latest
 openai>=latest
 wolframalpha
