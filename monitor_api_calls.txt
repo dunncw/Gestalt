@@ -1,3 +1,0 @@
-wolfram https://developer.wolframalpha.com/portal/myapps/index.html
-open ai https://platform.openai.com/account/usage
-serpapi https://serpapi.com/dashboard
