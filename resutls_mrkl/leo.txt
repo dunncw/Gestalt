@@ -1,0 +1,34 @@
+[1m> Entering new AgentExecutor chain...[0m
+[32;1m[1;3mI need to find out Leo DiCaprio's girlfriend's name and age
+Action: Search
+Action Input: "Leo DiCaprio girlfriend"
+[0m
+Observation: [36;1m[1;3mLeonardo DiCaprio & girlfriend Camila Morrone couple up for a lunch date! Dua Lipa sat courtside at the Knicks game with Mark Ronson & wife Grace Gummer....[0m
+Thought:[32;1m[1;3mI need to find out Camila Morrone's age
+Action: Search
+Action Input: "Camila Morrone age"
+[0m
+Observation: [36;1m[1;3m25 years[0m
+Thought:[32;1m[1;3mI need to calculate 25 raised to the 0.43 power
+Action: Calculator
+Action Input: 25^0.43
+
+[0m
+
+[1m> Entering new LLMMathChain chain...[0m
+25^0.43
+
+[32;1m[1;3m```python
+print(25**0.43)
+```
+[0m
+Answer: [33;1m[1;3m3.991298452658078
+[0m
+[1m> Finished chain.[0m
+
+Observation: [33;1m[1;3mAnswer: 3.991298452658078
+[0m
+Thought:[32;1m[1;3mI now know the final answer
+Final Answer: 3.991298452658078[0m
+
+[1m> Finished chain.[0m
