@@ -4890,7 +4890,7 @@ Actual Answer: 21/340
 
 Number of Questions: 105 
 
-Number of Correct Answers: 62
+Number of Correct Answers: 65
 
 Failed to parse: 11
 
