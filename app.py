@@ -73,7 +73,7 @@ block.queue() # was launch(debug = True)
 demo = gr.TabbedInterface(
 
     [block], ["chat"],
-    title='LangChain AI',
+    title='Gestalt',
 
 )
 
