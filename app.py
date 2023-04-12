@@ -54,10 +54,14 @@ with  gr.Blocks() as block:
 
     # create example questions to show the user the format of the questions they should ask. and what type of question the system is made to handle in both complexity and scope
     gr.Examples(
-        examples=["How many people live in Canada?",
+        examples=["What is the third root of 5249 to the nearest integer?",
                   "A triangle has the following side lengths: 4 cm, 4 cm and 4 cm. What kind of triangle is it?",
                   "There are 235 books in a library. On Monday, 123 books are taken out. On Tuesday, 56 books are brought back. How many books are there now?",
-                   "Solve an ordinary differential equation: y'' + y = 0" ],
+                   "How many kilometers are in a light-year, and what is the square root of that number?",
+                    "if 3x-y=12, what is the value of (8^(x)/2^(y))? A) 2^(12) B) 4^(4) C) 8^(2) D) the value cannot be determined from the information given",
+                     "The graph of which of the following equations is a straight line parallel to the graph of y = 2x ? a) 4x – y = 4 b) 2x – 2y = 2 c) 2x – y = 4 d) 2x + y = 2 e) x – 2y = 4",
+                      "a real estate agent recived a 6% commission on the selling price of a house. if his commission was 8,880 what was the selling price of the house?",
+                       "An airplane flies against the wind from A to B in 8 hours. The same airplane returns from B to A, in the same direction as the wind, in 7 hours. Find the ratio of speed of the airplane (in still air) to the speed of the wind."],
         inputs=question
     )
 
