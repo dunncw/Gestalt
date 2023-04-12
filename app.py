@@ -52,6 +52,17 @@ with  gr.Blocks() as block:
         #created a button to send the question to the chatbot.
         send = gr.Button(value="Send", variant="secondary").style(full_width=False)
 
+    # create example questions to show the user the format of the questions they should ask. and what type of question the system is made to handle in both complexity and scope
+    gr.Examples(
+        examples=["What is the third root of 5249 to the nearest integer?",
+                  "A triangle has the following side lengths: 4 cm, 4 cm and 4 cm. What kind of triangle is it?",
+                  "There are 235 books in a library. On Monday, 123 books are taken out. On Tuesday, 56 books are brought back. How many books are there now?",
+                   "How many kilometers are in a light-year, and what is the square root of that number?",
+                    "if 3x-y=12, what is the value of (8^(x)/2^(y))? A) 2^(12) B) 4^(4) C) 8^(2) D) the value cannot be determined from the information given",
+                     "The graph of which of the following equations is a straight line parallel to the graph of y = 2x ? a) 4x – y = 4 b) 2x – 2y = 2 c) 2x – y = 4 d) 2x + y = 2 e) x – 2y = 4",
+                      "a real estate agent recived a 6% commission on the selling price of a house. if his commission was 8,880 what was the selling price of the house?"],
+        inputs=question
+    )
 
     # i want to add a title to the table
     gr.HTML("""<h1>Answers to Examples</h1>""")
@@ -62,30 +73,43 @@ with  gr.Blocks() as block:
     <th>Question</th>
     <th>Correct Answer</th>
     </tr>
-    {% for question, answer in example_questions %}
     <tr>
-    <td><a href="#" onclick="document.querySelector('#question_input').value='{{ question }}'">{{ question }}</a></td>
-    <td>{{ answer }}</td>
+    <td>What is the third root of 5249 to the nearest integer?</td>
+    <td>17</td>
     </tr>
-    {% endfor %}
-    </table>""",
-        example_questions=[
-            ("What is the third root of 5249 to the nearest integer?", "17"),
-            ("A triangle has the following side lengths: 4 cm, 4 cm and 4 cm. What kind of triangle is it?", "equilateral"),
-            ("There are 235 books in a library. On Monday, 123 books are taken out. On Tuesday, 56 books are brought back. How many books are there now?", "168 books"),
-            ("How many kilometers are in a light-year, and what is the square root of that number?", "3075873.859572268"),
-            ("if 3x-y=12, what is the value of (8^(x)/2^(y))? A) 2^(12) B) 4^(4) C) 8^(2) D) the value cannot be determined from the information given", "A) 2^(12)"),
-            ("The graph of which of the following equations is a straight line parallel to the graph of y = 2x ? a) 4x – y = 4 b) 2x – 2y = 2 c) 2x – y = 4 d) 2x + y = 2 e) x – 2y = 4", "c) 2x – y = 4"),
-            ("a real estate agent recived a 6% commission on the selling price of a house. if his commission was 8,880 what was the selling price of the house?", "148,000")
-        ])
-    
-    # # Add an ID to the question input element for easy selection
-    # gr.utils.set_id(question, "question_input")
+    <tr>
+    <td>A triangle has the following side lengths: 4 cm, 4 cm and 4 cm. What kind of triangle is it?</td>
+    <td>equilateral</td>
+    </tr>
+    <tr>
+    <td>There are 235 books in a library. On Monday, 123 books are taken out. On Tuesday, 56 books are brought back. How many books are there now?</td>
+    <td>168 books</td>
+    </tr>
+    <tr>
+    <td>How many kilometers are in a light-year, and what is the square root of that number?</td>
+    <td>3075873.859572268</td>
+    </tr>
+    <tr>
+    <td>if 3x-y=12, what is the value of (8^(x)/2^(y))? A) 2^(12) B) 4^(4) C) 8^(2) D) the value cannot be determined from the information given</td>
+    <td>A) 2^(12)</td>
+    </tr>
+    <tr>
+    <td>The graph of which of the following equations is a straight line parallel to the graph of y = 2x ? a) 4x – y = 4 b) 2x – 2y = 2 c) 2x – y = 4 d) 2x + y = 2 e) x – 2y = 4</td>
+    <td>c) 2x – y = 4</td>
+    </tr>
+    <tr>
+    <td>a real estate agent recived a 6% commission on the selling price of a house. if his commission was 8,880 what was the selling price of the house?</td>
+    <td>148,000</td>
+    </tr>
+    </table>""")
 
     #connects the send button to the function that will respond to the user's question.
     send.click(chat, inputs=[question, state], outputs=[chatbot, state])
     #connects the enter key to the function that will respond to the user's question.
     question.submit(chat, inputs=[question, state], outputs=[chatbot, state])
+
+    # Add an ID to the question input element for easy selection
+    question.set_id("question_input")
 
     gr.HTML("""<center>Powered by <a href='https://github.com/hwchase17/langchain'>LangChain 🦜️🔗</a></center>""")
 
