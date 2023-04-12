@@ -79,8 +79,8 @@ with  gr.Blocks() as block:
             ("a real estate agent recived a 6% commission on the selling price of a house. if his commission was 8,880 what was the selling price of the house?", "148,000")
         ])
     
-    # Add an ID to the question input element for easy selection
-    gr.utils.set_id(question, "question_input")
+    # # Add an ID to the question input element for easy selection
+    # gr.utils.set_id(question, "question_input")
 
     #connects the send button to the function that will respond to the user's question.
     send.click(chat, inputs=[question, state], outputs=[chatbot, state])
