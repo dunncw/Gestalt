@@ -76,17 +76,16 @@ with  gr.Blocks() as block:
             ("How many kilometers are in a light-year, and what is the square root of that number?", "3075873.859572268"),
             ("if 3x-y=12, what is the value of (8^(x)/2^(y))? A) 2^(12) B) 4^(4) C) 8^(2) D) the value cannot be determined from the information given", "A) 2^(12)"),
             ("The graph of which of the following equations is a straight line parallel to the graph of y = 2x ? a) 4x – y = 4 b) 2x – 2y = 2 c) 2x – y = 4 d) 2x + y = 2 e) x – 2y = 4", "c) 2x – y = 4"),
-            ("a real estate agent recived a 6% commission on the selling price of a house. if his commission was 8,880 what was the selling price of the house?", "148,000"),
-            ("An airplane flies against the wind from A to B in 8 hours. The same airplane returns from B to A, in the same direction as the wind, in 7 hours. Find the ratio of speed of the airplane (in still air) to the speed of the wind.", "15:1")
+            ("a real estate agent recived a 6% commission on the selling price of a house. if his commission was 8,880 what was the selling price of the house?", "148,000")
         ])
+    
+    # Add an ID to the question input element for easy selection
+    gr.utils.set_id(question, "question_input")
 
     #connects the send button to the function that will respond to the user's question.
     send.click(chat, inputs=[question, state], outputs=[chatbot, state])
     #connects the enter key to the function that will respond to the user's question.
     question.submit(chat, inputs=[question, state], outputs=[chatbot, state])
-
-    # Add an ID to the question input element for easy selection
-    question.set_id("question_input")
 
     gr.HTML("""<center>Powered by <a href='https://github.com/hwchase17/langchain'>LangChain 🦜️🔗</a></center>""")
 
