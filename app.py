@@ -108,9 +108,6 @@ with  gr.Blocks() as block:
     #connects the enter key to the function that will respond to the user's question.
     question.submit(chat, inputs=[question, state], outputs=[chatbot, state])
 
-    # Add an ID to the question input element for easy selection
-    question.set_id("question_input")
-
     gr.HTML("""<center>Powered by <a href='https://github.com/hwchase17/langchain'>LangChain 🦜️🔗</a></center>""")
 
 block.queue() # was launch(debug = True)
