@@ -65,6 +65,49 @@ with  gr.Blocks() as block:
         inputs=question
     )
 
+    # i want to add a title to the table
+    gr.HTML("""<h1>Answers to Examples</h1>""")
+
+    # i want to add the correct answer to all the examples in a table
+    gr.HTML("""<table>
+    <tr>
+    <th>Question</th>
+    <th>Correct Answer</th>
+    </tr>
+    <tr>
+    <td>What is the third root of 5249 to the nearest integer?</td>
+    <td>13</td>
+    </tr>
+    <tr>
+    <td>A triangle has the following side lengths: 4 cm, 4 cm and 4 cm. What kind of triangle is it?</td>
+    <td>equilateral</td>
+    </tr>
+    <tr>
+    <td>There are 235 books in a library. On Monday, 123 books are taken out. On Tuesday, 56 books are brought back. How many books are there now?</td>
+    <td>102</td>
+    </tr>
+    <tr>
+    <td>How many kilometers are in a light-year, and what is the square root of that number?</td>
+    <td>9.46 x 10^15 km, 3.08 x 10^7 km</td>
+    </tr>
+    <tr>
+    <td>if 3x-y=12, what is the value of (8^(x)/2^(y))? A) 2^(12) B) 4^(4) C) 8^(2) D) the value cannot be determined from the information given</td>
+    <td>8^(2)</td>
+    </tr>
+    <tr>
+    <td>The graph of which of the following equations is a straight line parallel to the graph of y = 2x ? a) 4x – y = 4 b) 2x – 2y = 2 c) 2x – y = 4 d) 2x + y = 2 e) x – 2y = 4</td>
+    <td>2x – y = 4</td>
+    </tr>
+    <tr>
+    <td>a real estate agent recived a 6% commission on the selling price of a house. if his commission was 8,880 what was the selling price of the house?</td>
+    <td>148,000</td>
+    </tr>
+    <tr>
+    <td>An airplane flies against the wind from A to B in 8 hours. The same airplane returns from B to A, in the same direction as the wind, in 7 hours. Find the ratio of speed of the airplane (in still air) to the speed of the wind.</td>
+    <td>1:1</td>
+    </tr>
+    </table>""")
+
     #connects the send button to the function that will respond to the user's question.
     send.click(chat, inputs=[question, state], outputs=[chatbot, state])
     #connects the enter key to the function that will respond to the user's question.
