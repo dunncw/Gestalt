@@ -1,0 +1,352 @@
+=============================Q1==============================================================
+Question: What is the height of Mount Everest in meters divided by the length of the Golden Gate Bridge in meters?
+ 
+---------------------------------------------------------------
+Agent's Answer:
+ The height of Mount Everest in meters divided by the length of the Golden Gate Bridge in meters is approximately 0.0014. 
+==============================================================================================
+=============================Q2==============================================================
+Question: How many kilometers are in a light-year, and what is the square root of that number?
+ 
+---------------------------------------------------------------
+Agent's Answer:
+ A light-year is equal to 9.4607 x 10^12 kilometers. The square root of that number is 9.7277 x 10^6 kilometers. 
+==============================================================================================
+=============================Q3==============================================================
+Question: What is the combined height of the world's top 5 tallest buildings in meters multiplied by the speed of sound in meters per second?
+ 
+---------------------------------------------------------------
+Agent's Answer:
+ The combined height of the world's top 5 tallest buildings in meters is 1,972 meters. The speed of sound in meters per second is 343 meters per second. Therefore, the combined height 
+==============================================================================================
+=============================Q4==============================================================
+Question: What is the sum of the GDPs of the top 3 largest economies in the world in USD, divided by the number of countries in the European Union?
+ 
+---------------------------------------------------------------
+Agent's Answer:
+ The sum of the GDPs of the top 3 largest economies in the world in USD is $27.9 trillion. Divided by the number of countries in the European Union (27), this 
+==============================================================================================
+=============================Q5==============================================================
+Question: What is the population of Tokyo multiplied by the population density of Manhattan in people per square kilometer?
+ 
+---------------------------------------------------------------
+Agent's Answer:
+ The population of Tokyo is 9,273,000 and the population density of Manhattan is 72,033 people per square kilometer. When multiplied, the answer is 664,817,8 
+==============================================================================================
+=============================Q6==============================================================
+Question: What is the approximate weight of an adult African elephant in kilograms divided by the maximum weight a Boeing 747 can carry in kilograms?
+ 
+---------------------------------------------------------------
+Agent's Answer:
+ The approximate weight of an adult African elephant in kilograms is 6,000 kg. The maximum weight a Boeing 747 can carry in kilograms is 363,000 kg. Therefore, the ratio of the weight 
+==============================================================================================
+=============================Q7==============================================================
+Question: What is the distance from Earth to Mars in kilometers at their closest approach, divided by the circumference of Earth in kilometers?
+ 
+---------------------------------------------------------------
+Agent's Answer:
+ The distance from Earth to Mars in kilometers at their closest approach is approximately 54.6 million kilometers. The circumference of Earth in kilometers is approximately 40,075 kilometers. Therefore, the ratio of the 
+==============================================================================================
+=============================Q8==============================================================
+Question: What is the number of UNESCO World Heritage Sites in the world, multiplied by the number of languages spoken in Papua New Guinea?
+ 
+---------------------------------------------------------------
+Agent's Answer:
+ The number of UNESCO World Heritage Sites in the world is 1,121, and the number of languages spoken in Papua New Guinea is 832. The product of these two numbers is 927, 
+==============================================================================================
+=============================Q9==============================================================
+Question: What is the length of the Amazon River in kilometers, divided by the number of days in a year?
+ 
+---------------------------------------------------------------
+Agent's Answer:
+ The length of the Amazon River in kilometers is 6,400. Divided by the number of days in a year (365), the answer is 17.5 kilometers per day. 
+==============================================================================================
+=============================Q10==============================================================
+Question: What is the net worth of Elon Musk in USD, divided by the cost of launching a SpaceX Falcon 9 rocket in USD?
+ 
+---------------------------------------------------------------
+Agent's Answer:
+ The net worth of Elon Musk in USD is estimated to be around $20 billion. The cost of launching a SpaceX Falcon 9 rocket is estimated to be around $62 million. Therefore, the ratio 
+==============================================================================================
+=============================Q11==============================================================
+Question: What is the total number of episodes in the sitcom "Friends," raised to the power of the number of stars in the show's main cast?
+ 
+---------------------------------------------------------------
+Agent's Answer:
+ The total number of episodes in the sitcom "Friends" is 236, and the number of stars in the show's main cast is 6. Therefore, the answer is 236^6 = 4, 
+==============================================================================================
+=============================Q12==============================================================
+Question: What is the distance from the Earth to the Moon in kilometers, multiplied by the average thickness of a human hair in millimeters?
+ 
+---------------------------------------------------------------
+Agent's Answer:
+ The answer is approximately 7.34 x 10^14 kilometers x millimeters. 
+==============================================================================================
+=============================Q13==============================================================
+Question: How many minutes are in a day, divided by the number of bones in the human body?
+ 
+---------------------------------------------------------------
+Agent's Answer:
+ There are 1440 minutes in a day, and the human body has 206 bones. 1440 divided by 206 is 6.96. Therefore, there are approximately 6.96 minutes in a day divided by 
+==============================================================================================
+=============================Q14==============================================================
+Question: What is the number of verses in the Bible multiplied by the number of books in the Harry Potter series?
+ 
+---------------------------------------------------------------
+Agent's Answer:
+ 7,959 verses x 7 books = 55,713. 
+==============================================================================================
+=============================Q15==============================================================
+Question: What is the total number of rooms in the Palace of Versailles, multiplied by the number of permanent members in the United Nations Security Council?
+ 
+---------------------------------------------------------------
+Agent's Answer:
+ The total number of rooms in the Palace of Versailles is 2,300, and the number of permanent members in the United Nations Security Council is 5. Therefore, the total number of rooms 
+==============================================================================================
+=============================Q16==============================================================
+Question: What is the average life expectancy in Japan in years, divided by the number of legs on an octopus?
+ 
+---------------------------------------------------------------
+Agent's Answer:
+ The average life expectancy in Japan is 84.2 years, divided by the number of legs on an octopus (8) would be 10.525 years. 
+==============================================================================================
+=============================Q17==============================================================
+Question: What is the total area of Central Park in New York City in square meters, multiplied by the number of countries in North America?
+ 
+---------------------------------------------------------------
+Agent's Answer:
+ The total area of Central Park in New York City is 3.41 square kilometers, which is 3,410,000 square meters. There are 23 countries in North America, so the total area 
+==============================================================================================
+=============================Q18==============================================================
+Question: What is the height of Angel Falls in Venezuela in meters, raised to the power of the number of vowels in the English alphabet?
+ 
+---------------------------------------------------------------
+Agent's Answer:
+ Angel Falls is 979 meters high, so the answer is 979^5 = 6,837,921,875. 
+==============================================================================================
+=============================Q19==============================================================
+Question: What is the combined age of the two oldest living people in the world, divided by the number of planets in our solar system?
+ 
+---------------------------------------------------------------
+Agent's Answer:
+ The combined age of the two oldest living people in the world is 145 years. Divided by the number of planets in our solar system (8), this equals 18.125 years. 
+==============================================================================================
+=============================Q20==============================================================
+Question: What is the number of rooms in the White House, multiplied by the total number of U.S. presidents?
+ 
+---------------------------------------------------------------
+Agent's Answer:
+ There are 132 rooms in the White House, and there have been 45 U.S. presidents. Therefore, the answer is 132 x 45 = 5940. 
+==============================================================================================
+=============================Q21==============================================================
+Question: What is the maximum depth of the Mariana Trench in meters, divided by the number of official languages spoken in Switzerland?
+ 
+---------------------------------------------------------------
+Agent's Answer:
+ The maximum depth of the Mariana Trench in meters (11,034 m) divided by the number of official languages spoken in Switzerland (4) is 2,758.5 m. 
+==============================================================================================
+=============================Q22==============================================================
+Question: What is the record speed of a cheetah in kilometers per hour multiplied by the number of years Barack Obama served as President of the United States?
+ 
+---------------------------------------------------------------
+Agent's Answer:
+ The record speed of a cheetah in kilometers per hour is 109.4 km/h. Barack Obama served as President of the United States for 8 years. Therefore, the answer is 8 
+==============================================================================================
+=============================Q23==============================================================
+Question: What is the sum of the atomic numbers of the first 10 elements in the periodic table, raised to the power of the number of colors in a rainbow?
+ 
+---------------------------------------------------------------
+Agent's Answer:
+ The sum of the atomic numbers of the first 10 elements in the periodic table, raised to the power of the number of colors in a rainbow, is 6,814,976,7 
+==============================================================================================
+=============================Q24==============================================================
+Question: What is the length of the Great Wall of China in kilometers, divided by the number of letters in the word "antidisestablishmentarianism"?
+ 
+---------------------------------------------------------------
+Agent's Answer:
+ 2.5 kilometers 
+==============================================================================================
+=============================Q25==============================================================
+Question: What is the number of keys on a standard piano keyboard multiplied by the number of minutes it takes for light to travel from the Sun to Earth?
+ 
+---------------------------------------------------------------
+Agent's Answer:
+ The number of keys on a standard piano keyboard is 88. The number of minutes it takes for light to travel from the Sun to Earth is 8 minutes and 20 seconds. Therefore, the answer is 
+==============================================================================================
+=============================Q26==============================================================
+Question: What is the total number of Nobel Prize laureates, divided by the number of films in the Marvel Cinematic Universe?
+ 
+---------------------------------------------------------------
+Agent's Answer:
+ The total number of Nobel Prize laureates is 892, and the number of films in the Marvel Cinematic Universe is 23. Therefore, the answer is 38.78. 
+==============================================================================================
+=============================Q27==============================================================
+Question: What is the sum of the years the 3 longest-reigning monarchs ruled, divided by the number of stars on the flag of the United States?
+ 
+---------------------------------------------------------------
+Agent's Answer:
+ The 3 longest-reigning monarchs are Queen Elizabeth II (68 years), King Bhumibol Adulyadej of Thailand (70 years), and Emperor Hirohito of Japan 
+==============================================================================================
+=============================Q28==============================================================
+Question: What is the length of the Nile River in kilometers, multiplied by the number of Academy Awards won by the movie "Titanic"?
+ 
+---------------------------------------------------------------
+Agent's Answer:
+ The length of the Nile River in kilometers is 6,853, and the movie "Titanic" won 11 Academy Awards. 6,853 multiplied by 11 is 75,383 kilometers 
+==============================================================================================
+=============================Q29==============================================================
+Question: What is the total number of bones in a giraffe's neck multiplied by the number of lines in a Shakespearean sonnet?
+ 
+---------------------------------------------------------------
+Agent's Answer:
+ The total number of bones in a giraffe's neck is 7, and the number of lines in a Shakespearean sonnet is 14. Therefore, the total number of bones in a giraffe 
+==============================================================================================
+=============================Q30==============================================================
+Question: What is the number of stations in the London Underground, raised to the power of the number of moons orbiting Jupiter?
+ 
+---------------------------------------------------------------
+Agent's Answer:
+ The answer is 6,553,937,856,976,640,000. 
+==============================================================================================
+=============================Q31==============================================================
+Question: What is the total number of medals won by the top 3 countries in the 2020 Summer Olympics, divided by the number of events in a decathlon?
+ 
+---------------------------------------------------------------
+Agent's Answer:
+ The total number of medals won by the top 3 countries in the 2020 Summer Olympics was 546. Divided by the number of events in a decathlon (10), this would be 54. 
+==============================================================================================
+=============================Q32==============================================================
+Question: What is the weight of the heaviest pumpkin ever recorded in kilograms, multiplied by the number of members in the European Parliament?
+ 
+---------------------------------------------------------------
+Agent's Answer:
+ The heaviest pumpkin ever recorded weighed 1,190.5 kilograms. Multiplying this by the number of members in the European Parliament (766) gives a total of 914,817 
+==============================================================================================
+=============================Q33==============================================================
+Question: What is the height of the Burj Khalifa in meters, raised to the power of the number of vertices in a cube?
+ 
+---------------------------------------------------------------
+Agent's Answer:
+ The height of the Burj Khalifa in meters, raised to the power of the number of vertices in a cube is 828,364,836,722,097, 
+==============================================================================================
+=============================Q34==============================================================
+Question: What is the number of official languages in India, multiplied by the number of elements in the periodic table?
+ 
+---------------------------------------------------------------
+Agent's Answer:
+ There are 22 official languages in India and 118 elements in the periodic table, so the answer is 2556. 
+==============================================================================================
+=============================Q35==============================================================
+Question: What is the distance between Los Angeles and New York City in kilometers, divided by the number of days in a leap year?
+ 
+---------------------------------------------------------------
+Agent's Answer:
+ The distance between Los Angeles and New York City is 4,093 kilometers. Divided by the number of days in a leap year (366), the answer is 11.15 kilometers per day 
+==============================================================================================
+=============================Q36==============================================================
+Question: What is the total number of rooms in Buckingham Palace multiplied by the number of states in Brazil?
+ 
+---------------------------------------------------------------
+Agent's Answer:
+ The total number of rooms in Buckingham Palace multiplied by the number of states in Brazil is 7,872. 
+==============================================================================================
+=============================Q37==============================================================
+Question: What is the average height of a male adult giraffe in meters, raised to the power of the number of countries in the G7?
+ 
+---------------------------------------------------------------
+Agent's Answer:
+ The average height of a male adult giraffe is 4.8 meters. Raised to the power of the number of countries in the G7 (7), the answer is 1.715 
+==============================================================================================
+=============================Q38==============================================================
+Question: What is the total number of bones in an adult human body, divided by the number of countries in Africa?
+ 
+---------------------------------------------------------------
+Agent's Answer:
+ The total number of bones in an adult human body is 206, divided by the number of countries in Africa (54) is approximately 3.8. 
+==============================================================================================
+=============================Q39==============================================================
+Question: What is the number of chromosomes in a human cell, multiplied by the number of full moons in a year?
+ 
+---------------------------------------------------------------
+Agent's Answer:
+ The number of chromosomes in a human cell multiplied by the number of full moons in a year is 23 x 12 = 276. 
+==============================================================================================
+=============================Q40==============================================================
+Question: What is the distance from the Earth to the Sun in kilometers, divided by the number of wonders in the ancient world?
+ 
+---------------------------------------------------------------
+Agent's Answer:
+ 149,935,000 km / 7 = 21,419,285.71 km 
+==============================================================================================
+=============================Q41==============================================================
+Question: What is the number of playable characters in the video game "Super Smash Bros. Ultimate," multiplied by the number of letters in the Greek alphabet?
+ 
+---------------------------------------------------------------
+Agent's Answer:
+ There are 74 playable characters in Super Smash Bros. Ultimate, and 24 letters in the Greek alphabet. Therefore, the answer is 1,776. 
+==============================================================================================
+=============================Q42==============================================================
+Question: What is the number of countries in the world, raised to the power of the number of zeros in a googol (10^100)?
+ 
+---------------------------------------------------------------
+Agent's Answer:
+ 10^100000 
+==============================================================================================
+=============================Q43==============================================================
+Question: What is the total number of Olympic gold medals won by Michael Phelps, divided by the number of natural satellites orbiting Earth?
+ 
+---------------------------------------------------------------
+Agent's Answer:
+ The total number of Olympic gold medals won by Michael Phelps is 28. The number of natural satellites orbiting Earth is currently 181. Therefore, 28 divided by 181 is 0.15492958. 
+==============================================================================================
+=============================Q44==============================================================
+Question: What is the number of keys on a standard computer keyboard, multiplied by the number of days it takes for Venus to orbit the Sun?
+ 
+---------------------------------------------------------------
+Agent's Answer:
+ 224.6 
+==============================================================================================
+=============================Q45==============================================================
+Question: What is the combined length of all three Lord of the Rings movies (Extended Editions) in minutes, divided by the number of books in the trilogy?
+ 
+---------------------------------------------------------------
+Agent's Answer:
+ The combined length of all three Lord of the Rings movies (Extended Editions) in minutes is 558 minutes. Divided by the number of books in the trilogy (3 books), this 
+==============================================================================================
+=============================Q46==============================================================
+Question: What is the speed of light in meters per second, raised to the power of the number of primary colors?
+ 
+---------------------------------------------------------------
+Agent's Answer:
+ 3 x 10^8^3 
+==============================================================================================
+=============================Q47==============================================================
+Question: What is the number of islands in the Philippines, multiplied by the number of points in a perfect score on the SAT exam?
+ 
+---------------------------------------------------------------
+Agent's Answer:
+ The number of islands in the Philippines is 7,641 multiplied by the number of points in a perfect score on the SAT exam, which is 1600, equals 12,304,600. 
+==============================================================================================
+=============================Q48==============================================================
+Question: What is the height of Mount Kilimanjaro in meters, divided by the number of members in the International Space Station's typical crew?
+ 
+---------------------------------------------------------------
+Agent's Answer:
+ The height of Mount Kilimanjaro in meters is 5,895, divided by the number of members in the International Space Station's typical crew (6) is 982.5 meters 
+==============================================================================================
+=============================Q49==============================================================
+Question: What is the number of countries that use the Euro as their official currency, multiplied by the total number of planets in our solar system?
+ 
+---------------------------------------------------------------
+Agent's Answer:
+ There are 19 countries that use the Euro as their official currency, and 8 planets in our solar system. 19 x 8 = 152. 
+==============================================================================================
+=============================Q50==============================================================
+Question: What is the combined age of the Beatles at the time of their last performance, divided by the number of strings on a standard guitar? 
+---------------------------------------------------------------
+Agent's Answer:
+ The combined age of the Beatles at the time of their last performance was 218 years. A standard guitar has 6 strings, so 218 divided by 6 is 36.3. 
+==============================================================================================
+Number of Questions: 50 
+Number of Correct Answers: 1 
+Accuracy: 0.02
