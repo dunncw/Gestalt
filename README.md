@@ -1,17 +1,3 @@
----
-title: Test
-emoji: 🚀
-colorFrom: gray
-colorTo: purple
-sdk: gradio
-sdk_version: 3.18.0
-app_file: app.py
-pinned: false
-license: unknown
----
-
-Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
-
 # Gestalt
 Gestalt is an AI system designed to enhance the mathematical problem-solving capabilities of large language models like GPT-3 and GPT-4. It was created as part of a research project exploring new approaches to augmenting LLMs for complex problem solving tasks.
 
